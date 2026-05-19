@@ -1,0 +1,12 @@
+path: ./dataset
+train: train/images
+val: val/images
+
+nc: 6
+names:
+  - Gloves
+  - Hard_hat
+  - Mask
+  - Person
+  - Safety_boots
+  - Vest
