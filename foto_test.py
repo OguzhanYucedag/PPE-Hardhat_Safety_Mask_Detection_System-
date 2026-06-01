@@ -11,7 +11,7 @@ model_path = ROOT / "runs/detect/KKD_Projesi/ilk_egitim/weights/best.pt"
 model = YOLO(model_path)
 
 # 2. Adım: Test etmek istediğimiz resmin adını veriyoruz
-test_edilecek_resim = ROOT / "test" / "test_resmi03.jpg"
+test_edilecek_resim = ROOT / "test" / "test_resmi07.jpeg"
 if not test_edilecek_resim.exists():
     raise FileNotFoundError(f"Test resmi bulunamadı: {test_edilecek_resim}")
 
