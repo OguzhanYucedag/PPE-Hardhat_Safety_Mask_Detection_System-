@@ -7,11 +7,11 @@ from ultralytics import YOLO
 # egitim.py'deki project='KKD_Projesi', name='ilk_egitim' -> runs/detect/KKD_Projesi/ilk_egitim/
 ROOT = Path(__file__).resolve().parent
 CIKTI_KLASORU = ROOT / "runs" / "detect" / "predict"
-model_path = ROOT / "runs/detect/KKD_Projesi/ikinci_egitim/weights/best.pt"
+model_path = ROOT / "runs/detect/KKD_Projesi/ucuncu_egitim/weights/best.pt"
 model = YOLO(model_path)
 
 # 2. Adım: Test etmek istediğimiz resmin adını veriyoruz
-test_edilecek_resim = ROOT / "test" / "test_resmi08.jpeg"
+test_edilecek_resim = ROOT / "test" / "test_resmi01.jpg"
 if not test_edilecek_resim.exists():
     raise FileNotFoundError(f"Test resmi bulunamadı: {test_edilecek_resim}")
 
