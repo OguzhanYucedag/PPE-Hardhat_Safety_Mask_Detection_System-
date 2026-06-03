@@ -170,4 +170,4 @@ Bunlar **`dataset/val`** verisinden farklıdır: `dataset/val` ham etiketli veri
 
 - Mac (M1/M2/M3): eğitim scriptlerinde `device='mps'` kullanılır.
 - NVIDIA GPU varsa `device='0'` veya `device='cuda'` olarak değiştirilebilir.
-- Büyük model dosyaları (`.pt`) Git’e eklenmemiş olabilir; eğitim sonrası yerel olarak oluşur.
+
