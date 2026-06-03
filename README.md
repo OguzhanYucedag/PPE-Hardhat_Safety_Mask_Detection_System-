@@ -31,7 +31,7 @@ source venv/bin/activate   # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-**Gereksinimler:** Python 3.10+, Mac kullanıcıları için Apple Silicon (`mps`) destekli PyTorch.
+
 
 ## Proje yapısı
 
