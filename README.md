@@ -15,10 +15,10 @@ Kişisel koruyucu donanım (KKD / PPE) öğelerini görüntülerde ve canlı kam
 
 ## Kullanılan teknolojiler
 
-- [Ultralytics YOLOv8](https://docs.ultralytics.com/) — model eğitimi ve tahmin
-- [OpenCV](https://opencv.org/) — görüntü işleme
-- [Streamlit](https://streamlit.io/) — web arayüzü
-- [streamlit-webrtc](https://github.com/whitphx/streamlit-webrtc) — canlı kamera
+- [Ultralytics YOLOv8] — model eğitimi ve tahmin
+- [OpenCV] — görüntü işleme
+- [Streamlit] — web arayüzü
+- [streamlit-webrtc]— canlı kamera
 
 ## Kurulum
 
@@ -66,18 +66,18 @@ PPE(Hardhat_Safety_Mask_Detection_System)/
 
 Veri henüz yoksa:
 
-```bash
+```
 python veri_indir.py    # Roboflow API anahtarı gerekir
 python veri_duzenle.py  # İndirilen veriyi dataset/ yapısına böler
 ```
 
-> `veri_indir.py` içinde API anahtarınızı doğrudan paylaşmayın; mümkünse ortam değişkeni kullanın.
+
 
 ## Model eğitimi
 
 ### 1. İlk eğitim
 
-```bash
+```
 python ilkEgitim.py
 ```
 
@@ -87,7 +87,7 @@ python ilkEgitim.py
 
 İlk eğitimden sonra, daha fazla tur ve erken durdurma (`patience`) ile:
 
-```bash
+```
 python ikinciEgitim.py
 ```
 
@@ -95,7 +95,7 @@ python ikinciEgitim.py
 
 İkinci eğitimin `best.pt` dosyası üzerinden ince ayar:
 
-```bash
+```
 python ucuncuEgitim.py
 ```
 
@@ -125,7 +125,7 @@ Bu komut `runs/detect/val`, `val-2`, … klasörlerini de oluşturabilir (YOLO d
 
 `foto_test.py` içinde model ve test resmi yolunu düzenleyin, ardından:
 
-```bash
+```
 python foto_test.py
 ```
 
@@ -133,11 +133,11 @@ Sonuçlar `runs/detect/predict/` altına kaydedilir.
 
 ## Web arayüzü
 
-```bash
+```
 streamlit run web_app.py
 ```
 
-Tarayıcıda `http://localhost:8501` açılır.
+
 
 | Sekme | Özellik |
 |-------|---------|
@@ -161,13 +161,10 @@ Bunlar **`dataset/val`** verisinden farklıdır: `dataset/val` ham etiketli veri
 
 ## Ezberleme (overfitting) kontrolü
 
-- `results.png` içinde train ve val loss eğrilerini karşılaştırın.
-- Val mAP düşerken train loss düşmeye devam ediyorsa eğitimi durdurun (`patience` kullanın).
-- Yeni, görülmemiş fotoğraflarla (`test/`) manuel test yapın.
+- `results.png` içinde train ve val loss eğrileri.
+- Val mAP düşerken train loss düşmeye devam ediyorsa eğitimi durdurun (`patience` kullandık).
+- Yeni, görülmemiş fotoğraflarla (`test/`) manuel test yaptık.
 
-## Lisans ve veri
-
-Eğitim verisi Roboflow üzerinden indirilmiştir; kullanım koşulları için ilgili veri seti sayfasına bakın.
 
 ## Geliştirici notları
 

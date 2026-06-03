@@ -71,7 +71,7 @@ def load_model():
     )
 
 
-model, model_yolu = load_model()
+model, _ = load_model()
 
 
 class KKDVideoProcessor(VideoProcessorBase):
@@ -131,7 +131,6 @@ def sonuclari_goster(rgb_img: np.ndarray, tespitler: list, baslik: str):
 
 
 st.title("KKD (PPE) Tespit Sistemi")
-st.caption(f"Model: `{model_yolu}`")
 
 conf = st.slider("Güven eşiği", 0.1, 1.0, 0.5)
 analiz_araligi = st.slider(
