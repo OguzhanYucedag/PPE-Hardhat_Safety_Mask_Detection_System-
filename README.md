@@ -81,7 +81,6 @@ python veri_duzenle.py  # İndirilen veriyi dataset/ yapısına böler
 python ilkEgitim.py
 ```
 
-Çıktı: `runs/detect/KKD_Projesi/ilk_egitim/weights/best.pt`
 
 ### 2. İkinci eğitim
 
